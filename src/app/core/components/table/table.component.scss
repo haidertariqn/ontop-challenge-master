@@ -16,15 +16,25 @@
       letter-spacing: 0.25px;
       color: var(--black);
 
-      th,
-      td {
-        padding-top: 0px;
-        padding-bottom: 40px;
-        padding-left: 30px;
-        padding-right: 41px;
-        border-bottom: 0;
+      .status {
+        display: flex;
+        padding-bottom: 44px;
       }
-    }s
+
+      .centered {
+        padding-bottom: 44px;
+        display: flex;
+        justify-content: center;
+      }
+      // th,      In Figma design only Status header is not at center of the column so we cannot use same padding on all Table headers
+      // td {
+      //   padding-top: 0px;
+      //   padding-bottom: 40px;
+      //   padding-left: 30px;
+      //   padding-right: 41px;
+      //   border-bottom: 0;
+      // }
+    }
 
     tbody {
       text-align: center;

@@ -1,16 +1,19 @@
 <div class="table-container">
   <table class="table table-borderless borderless">
     <thead>
-      <tr>
-        <th scope="col" *ngFor="let key of ColData; index as i">
-          {{ key.header }}
-        </th>
-      </tr>
+      <th scope="col" *ngFor="let key of ColData; index as i">
+        <span
+          [ngClass]="{
+            status: key.header === 'Status',
+            centered: key.header !== 'Status'
+          }"
+          >{{ key.header }}</span
+        >
+      </th>
     </thead>
     <tbody>
       <tr *ngFor="let data of GridData; index as i">
         <ng-container *ngFor="let key of ColData; index as i">
-
           <td
             [ngClass]="[
               data[key.field] | tableStatusStyle,
@@ -21,7 +24,7 @@
               <img [src]="data.imagePath" alt=""
             /></span>
 
-            <span  [ngClass]="[ key.field != 'status' ? '' : 'status']">
+            <span [ngClass]="[key.field != 'status' ? '' : 'status']">
               <span class="pointer" *ngIf="key.field === 'status'"> </span>
 
               {{ data[key.field] }}
@@ -50,7 +53,14 @@
                   </svg>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <li *ngFor="let action of Actions" (click)="$event.preventDefault(); $event.stopPropagation(); action.click(data, action)">
+                  <li
+                    *ngFor="let action of Actions"
+                    (click)="
+                      $event.preventDefault();
+                      $event.stopPropagation();
+                      action.click(data, action)
+                    "
+                  >
                     <a class="dropdown-item">
                       <span
                         ><img
