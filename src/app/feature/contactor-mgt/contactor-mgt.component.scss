@@ -95,7 +95,9 @@
   .create-btn {
     width: 192px;
     button {
-      padding: 11px 12px 20px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       color: var(--white);
       background: #ff5a70;
       box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
@@ -110,6 +112,10 @@
   
     button:hover {
       background: #fd3a54;
+    }
+
+    .img {
+      margin-bottom: 2px
     }
   }
 }
