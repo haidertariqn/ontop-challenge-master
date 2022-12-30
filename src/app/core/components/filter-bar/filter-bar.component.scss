@@ -195,12 +195,18 @@
   }
 
   .clear {
-    display: block !important;
+    display: flex !important;
     text-align: right;
     color: var(--pink);
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.25px;
+    justify-content: flex-end;
+    align-items: baseline;
+  }
+
+  .clear-img {
+    margin-right: 5px;
   }
 }
 

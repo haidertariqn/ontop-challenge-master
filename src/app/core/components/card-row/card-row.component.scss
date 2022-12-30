@@ -75,6 +75,11 @@
       height: 4.01px;
     }
 
+    .status-container {
+      width: 112px;
+      height: 19px;
+    }
+
     .status-style {
       span {
         padding: 4px 8px 4px;
@@ -98,10 +103,4 @@
   table {
     padding-bottom: 10px;
   }
-}
-
-.status-container {
-    width: 112px;
-    height: 19px;
-    margin-right: 30px;
 }
