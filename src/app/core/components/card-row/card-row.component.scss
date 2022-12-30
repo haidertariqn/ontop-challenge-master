@@ -14,8 +14,6 @@
     li {
       list-style: none;
       display: flex;
-      justify-content: space-between;
-
       font-weight: 700;
       font-size: 12px;
       line-height: 20px;
@@ -27,6 +25,10 @@
         font-size: 12px;
         line-height: 24px;
         letter-spacing: 0.1px;
+      }
+
+      .head {
+        margin-bottom: 0;
         width: 50%;
       }
 
